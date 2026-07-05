@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Marks JS as available so entrance animations can pre-hide their targets
+       (with JS off, nothing is hidden — progressive enhancement). -->
+  <script>document.documentElement.classList.add('has-js');</script>
+  <title>OPAL VIP Member — Exclusive Membership</title>
+  <meta name="description"
+    content="OPAL Exclusive VIP Membership — exclusive privileges, preferred pricing, priority access and personalized rewards crafted for every step of your journey." />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Great+Vibes&family=Inter:wght@400;700;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <img class="hero__photo" src="assets/hero-woman.png" alt="" />
+      <div class="hero__gradient"></div>
+    </div>
+
+    <div class="hero__topbar">
+      <img class="logo logo--light" src="assets/opal-logo.png" alt="OPAL" />
+      <span class="gold-line gold-line--short"></span>
+      <p class="hero__eyebrow">Exclusive Membership</p>
+    </div>
+
+    <div class="hero__content">
+      <h1 class="hero__title">VIP</h1>
+      <p class="hero__member">Member</p>
+      <div class="hero__divider"></div>
+      <p class="hero__lead">Exclusive privileges, preferred pricing, priority access &amp; personalized rewards —
+        crafted for every step of your journey</p>
+    </div>
+
+    <div class="hero__footer">
+      <div class="goldbar">
+        <span class="goldbar__line goldbar__line--l"></span>
+        <img class="goldbar__diamond" src="assets/diamond-icon.svg" alt="" />
+        <span class="goldbar__line goldbar__line--r"></span>
+      </div>
+      <p class="hero__tagline">Your Beauty. Our Privilege</p>
+    </div>
+  </section>
+
+  <!-- ============================ INTRO ============================ -->
+  <section class="intro" id="about">
+    <div class="intro__bg" aria-hidden="true">
+      <img class="intro__photo" src="assets/intro-woman.png" alt="" />
+      <div class="intro__gradient"></div>
+    </div>
+
+    <div class="intro__content">
+      <p class="intro__welcome">Welcome to</p>
+      <img class="logo logo--light intro__logo" src="assets/opal-logo.png" alt="OPAL" />
+      <p class="intro__vip">VIP</p>
+
+      <div class="goldbar goldbar--left">
+        <span class="goldbar__line goldbar__line--l"></span>
+        <img class="goldbar__diamond" src="assets/diamond-icon.svg" alt="" />
+        <span class="goldbar__line goldbar__line--r"></span>
+      </div>
+
+      <p class="intro__lead">As an OPAL VIP Member, you enjoy exclusive privileges, preferred pricing, priority access
+        and personalized rewards created to enhance every step of your journey with us.</p>
+
+      <div class="intro__badge">Your Beauty. Our Privilege.</div>
+
+      <a class="btn-vip" href="#privileges">
+        <span>Discover Your Privileges</span>
+        <span class="btn-vip__arrow" aria-hidden="true">&#8594;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================ BEFORE & AFTER ============================ -->
+  <section class="ba" id="before-after">
+    <h2 class="ba__title">Before <span class="amp">&amp;</span> <span class="ba__after">After</span></h2>
+
+    <div class="ba__carousel">
+      <button class="ba__nav ba__nav--prev" aria-label="Previous case">&#8249;</button>
+
+      <div class="ba__track" id="baTrack">
+
+        <!-- Card 1 -->
+        <article class="ba-card" data-title="Ethnic Rhinoplasty">
+          <div class="ba-card__head">
+            <div>
+              <h3 class="ba-card__name">Ethnic Rhinoplasty</h3>
+              <p class="ba-card__desc">Refined the nose while preserving the patient's unique ethnic features and facial
+                identity.</p>
+            </div>
+          </div>
+          <div class="ba-card__stage">
+            <img class="ba-layer ba-layer--before" src="assets/ba-before-a.jpg" alt="Before — Ethnic Rhinoplasty"
+              draggable="false" />
+            <img class="ba-layer ba-layer--after" src="assets/ba-after-a.jpg" alt="After — Ethnic Rhinoplasty"
+              draggable="false" />
+            <span class="ba-watermark">OPAL</span>
+            <div class="ba-toggle" role="group" aria-label="Compare before and after">
+              <button type="button" class="ba-toggle__btn is-active" data-mode="before"
+                aria-pressed="true">Before</button>
+              <button type="button" class="ba-toggle__btn" data-mode="after" aria-pressed="false">After</button>
+            </div>
+          </div>
+          <div class="ba-card__foot">
+            <div class="ba-card__brand"><strong>OPAL</strong><span>Aesthetic Clinics</span></div>
+            <span class="ba-card__state">BEFORE</span>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="ba-card" data-title="Sculpted Arms">
+          <div class="ba-card__head">
+            <div>
+              <h3 class="ba-card__name">Sculpted Arms</h3>
+              <p class="ba-card__desc">Removed stubborn fat deposits to create slimmer, more defined arm contours.</p>
+            </div>
+          </div>
+          <div class="ba-card__stage">
+            <img class="ba-layer ba-layer--before" src="assets/Sculpted Arms Before.jpeg" alt="Before — Sculpted Arms"
+              draggable="false" />
+            <img class="ba-layer ba-layer--after" src="assets/Sculpted Arms After.jpeg" alt="After — Sculpted Arms"
+              draggable="false" />
+            <span class="ba-watermark">OPAL</span>
+            <div class="ba-toggle" role="group" aria-label="Compare before and after">
+              <button type="button" class="ba-toggle__btn is-active" data-mode="before"
+                aria-pressed="true">Before</button>
+              <button type="button" class="ba-toggle__btn" data-mode="after" aria-pressed="false">After</button>
+            </div>
+          </div>
+          <div class="ba-card__foot">
+            <div class="ba-card__brand"><strong>OPAL</strong><span>Aesthetic Clinics</span></div>
+            <span class="ba-card__state">BEFORE</span>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="ba-card" data-title="Lower Face Contour">
+          <div class="ba-card__head">
+            <div>
+              <h3 class="ba-card__name">Lower Face Contour</h3>
+              <p class="ba-card__desc">Improved jawline definition and facial harmony with strategically placed dermal
+                fillers.</p>
+            </div>
+          </div>
+          <div class="ba-card__stage">
+            <img class="ba-layer ba-layer--before" src="assets/Lower Face Contour Before.jpeg"
+              alt="Before — Lower Face Contour" draggable="false" />
+            <img class="ba-layer ba-layer--after" src="assets/Lower Face Contour After.jpeg"
+              alt="After — Lower Face Contour" draggable="false" />
+            <span class="ba-watermark">OPAL</span>
+            <div class="ba-toggle" role="group" aria-label="Compare before and after">
+              <button type="button" class="ba-toggle__btn is-active" data-mode="before"
+                aria-pressed="true">Before</button>
+              <button type="button" class="ba-toggle__btn" data-mode="after" aria-pressed="false">After</button>
+            </div>
+          </div>
+          <div class="ba-card__foot">
+            <div class="ba-card__brand"><strong>OPAL</strong><span>Aesthetic Clinics</span></div>
+            <span class="ba-card__state">BEFORE</span>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="ba-card" data-title="Youthful Lift">
+          <div class="ba-card__head">
+            <div>
+              <h3 class="ba-card__name">Youthful Lift</h3>
+              <p class="ba-card__desc">Restored facial contours and achieved a naturally lifted appearance without
+                surgery.</p>
+            </div>
+          </div>
+          <div class="ba-card__stage">
+            <img class="ba-layer ba-layer--before" src="assets/Youthful Lift Before.jpeg" alt="Before — Youthful Lift"
+              draggable="false" />
+            <img class="ba-layer ba-layer--after" src="assets/Youthful Lift After.jpeg" alt="After — Youthful Lift"
+              draggable="false" />
+            <span class="ba-watermark">OPAL</span>
+            <div class="ba-toggle" role="group" aria-label="Compare before and after">
+              <button type="button" class="ba-toggle__btn is-active" data-mode="before"
+                aria-pressed="true">Before</button>
+              <button type="button" class="ba-toggle__btn" data-mode="after" aria-pressed="false">After</button>
+            </div>
+          </div>
+          <div class="ba-card__foot">
+            <div class="ba-card__brand"><strong>OPAL</strong><span>Aesthetic Clinics</span></div>
+            <span class="ba-card__state">BEFORE</span>
+          </div>
+        </article>
+
+      </div>
+
+      <button class="ba__nav ba__nav--next" aria-label="Next case">&#8250;</button>
+    </div>
+
+    <div class="ba__dots" id="baDots" role="tablist" aria-label="Case selector"></div>
+
+    <p class="ba__caption">Refined the nose while preserving the patient's unique ethnic features and facial identity
+    </p>
+  </section>
+
+  <!-- ============================ SERVICES ============================ -->
+  <section class="services" id="services">
+    <header class="services__head">
+      <p class="eyebrow eyebrow--red">What We Offer</p>
+      <h2 class="services__title">Our Services</h2>
+      <p class="services__sub">Advanced aesthetic, regenerative, wellness and surgical solutions tailored to help you
+        look and feel your best</p>
+    </header>
+
+    <div class="services__grid">
+      <article class="svc-card">
+        <h3 class="svc-card__title">Facial Aesthetics</h3>
+        <ul class="svc-list">
+          <li>Filler</li>
+          <li>Botox</li>
+          <li>Skin Boosters</li>
+          <li>Dissolver</li>
+          <li>Bio-stimulators</li>
+          <li>Body Fillers</li>
+          <li>PDR / Salmon DNA</li>
+          <li>Exosomes</li>
+          <li>Growth Factors</li>
+        </ul>
+      </article>
+
+      <article class="svc-card">
+        <h3 class="svc-card__title">Regenerative Medicine</h3>
+        <ul class="svc-list">
+          <li>Regenerative Medicine Treatments</li>
+          <li>PRP (Platelet-Rich Plasma)</li>
+          <li>Micro Matrix</li>
+        </ul>
+      </article>
+
+      <article class="svc-card">
+        <h3 class="svc-card__title">Skin &amp; Hair Health</h3>
+        <ul class="svc-list">
+          <li>Mesotherapy</li>
+          <li>Chemical Peels</li>
+          <li>Dermapen &amp; Dermapen 4</li>
+          <li>Aquapure</li>
+          <li>Dermatology Consultations</li>
+        </ul>
+      </article>
+
+      <article class="svc-card">
+        <h3 class="svc-card__title">Laser Services</h3>
+        <ul class="svc-list">
+          <li>Fractional Laser</li>
+          <li>Skin Tag Removal</li>
+          <li>Laser Hair Removal (Candela GentleLase Pro-U 2024)</li>
+        </ul>
+      </article>
+
+      <article class="svc-card">
+        <h3 class="svc-card__title">Body Contouring &amp; Wellness</h3>
+        <ul class="svc-list">
+          <li>Mesolipolysis</li>
+          <li>IV Drips</li>
+          <li>HIFU</li>
+          <li>Medical Lymphatic Massage</li>
+        </ul>
+      </article>
+
+      <article class="svc-card">
+        <h3 class="svc-card__title">Hair Restoration</h3>
+        <ul class="svc-list">
+          <li>PRP Hair Treatments</li>
+          <li>Growth Factor Therapy</li>
+          <li>Regenerative Hair Solutions</li>
+        </ul>
+      </article>
+
+      <article class="svc-card">
+        <h3 class="svc-card__title">Surgical &amp; Medical</h3>
+        <ul class="svc-list">
+          <li>Plastic Surgery</li>
+          <li>Nutrition Consultations &amp; Programs</li>
+          <li>Ultrasound Services</li>
+        </ul>
+      </article>
+
+      <article class="svc-card svc-card--filler" aria-hidden="true"></article>
+    </div>
+
+    <div class="cta-bar">
+      <div class="cta-bar__text">
+        <h3 class="cta-bar__title">Discover More With Your VIP Card</h3>
+        <p class="cta-bar__desc">Scan the QR code to access our Instagram page, clinic contact information, and
+          appointment booking details. Everything you need, all in one place</p>
+        <div class="cta-bar__actions">
+          <span class="chip">Instagram</span>
+          <span class="chip">Contact</span>
+          <span class="chip">Booking</span>
+        </div>
+      </div>
+      <div class="cta-bar__qr">
+        <img src="assets/qr-code.svg" alt="QR code linking to OPAL Instagram, contact and booking" />
+        <span class="cta-bar__scan">Scan to connect</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ PRIVILEGES (split) ============================ -->
+  <section class="priv" id="privileges">
+    <div class="priv__col priv__col--wellness">
+      <div class="priv__inner">
+        <h2 class="priv__heading">
+          <span class="priv__word priv__word--cream">Wellness</span>
+          <span class="priv__word priv__word--gold">Privileges</span>
+        </h2>
+        <p class="priv__pct">30%</p>
+        <p class="priv__pctlbl">VIP Discount</p>
+        <p class="priv__cat">Wellness &amp; Dermatology</p>
+        <span class="priv__rule"></span>
+        <ul class="priv__list">
+          <li>Nutrition Consultations &amp; Programs</li>
+          <li>Mesotherapy Treatments</li>
+          <li>Dermatology Services</li>
+        </ul>
+        <p class="priv__note">Because beauty starts from within</p>
+      </div>
+    </div>
+
+    <span class="priv__vdivider" aria-hidden="true"></span>
+
+    <div class="priv__col priv__col--injectables">
+      <div class="priv__inner">
+        <h2 class="priv__heading">
+          <span class="priv__word priv__word--gold">Injectables</span>
+          <span class="priv__word priv__word--cream">Privileges</span>
+        </h2>
+        <p class="priv__pct">20%</p>
+        <p class="priv__pctlbl">VIP Discount</p>
+        <p class="priv__cat">Injectables</p>
+        <span class="priv__rule"></span>
+        <ul class="priv__list">
+          <li>Botox Treatments</li>
+          <li>Filler Treatments</li>
+          <li>Mesolipolysis</li>
+          <li>Skin Boosters</li>
+        </ul>
+        <p class="priv__note">Because beauty starts from within</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ LASER PRIVILEGES ============================ -->
+  <section class="laser" id="laser">
+    <div class="laser__bg" aria-hidden="true">
+      <img class="laser__photo" src="assets/laser-device.png" alt="" />
+      <div class="laser__gradient"></div>
+    </div>
+
+    <div class="laser__content">
+      <p class="eyebrow eyebrow--cream">Advanced Technology</p>
+      <h2 class="laser__title">Laser Privileges</h2>
+      <div class="goldbar goldbar--center">
+        <span class="goldbar__line goldbar__line--l"></span>
+        <img class="goldbar__diamond" src="assets/diamond-icon.svg" alt="" />
+        <span class="goldbar__line goldbar__line--r"></span>
+      </div>
+      <p class="laser__lead">Access advanced laser technologies with exclusive VIP savings to achieve exceptional
+        results</p>
+
+      <div class="laser__cards">
+        <div class="laser-card">
+          <p class="laser-card__pct">50%</p>
+          <p class="laser-card__lbl">Discount</p>
+          <span class="laser-card__rule"></span>
+          <p class="laser-card__name">Laser Pulse</p>
+        </div>
+        <div class="laser-card">
+          <p class="laser-card__pct">20%</p>
+          <p class="laser-card__lbl">Discount</p>
+          <span class="laser-card__rule"></span>
+          <p class="laser-card__name">Laser Packages</p>
+        </div>
+        <div class="laser-card">
+          <p class="laser-card__pct">30%</p>
+          <p class="laser-card__lbl">Discount</p>
+          <span class="laser-card__rule"></span>
+          <p class="laser-card__name">Fractional Laser Treatments</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ WELCOME 50% OFF ============================ -->
+  <section class="welcome" id="welcome-offer">
+    <span class="corner corner--tl"></span>
+    <span class="corner corner--tr"></span>
+    <span class="corner corner--bl"></span>
+    <span class="corner corner--br"></span>
+
+    <div class="welcome__inner">
+      <p class="welcome__pct">50%</p>
+      <p class="welcome__off">OFF</p>
+      <p class="welcome__svc">Your Highest-Value Service</p>
+
+      <div class="goldbar goldbar--center goldbar--dark">
+        <span class="goldbar__line goldbar__line--l"></span>
+        <img class="goldbar__diamond" src="assets/diamond-icon.svg" alt="" />
+        <span class="goldbar__line goldbar__line--r"></span>
+      </div>
+
+      <p class="welcome__lead">As a welcome privilege, VIP members receive 50% off the highest-value service performed
+        during their first visit after activating the VIP Card</p>
+
+      <div class="terms">
+        <p class="terms__title">Terms &amp; Conditions</p>
+        <ul class="terms__list">
+          <li>Valid once only</li>
+          <li>Redeemable during the activation visit</li>
+          <li>Applies to one service only</li>
+          <li>Applies to the highest-value service performed during that visit</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ MEMBERSHIP DURATION ============================ -->
+  <section class="duration" id="duration">
+    <div class="duration__inner">
+      <p class="eyebrow eyebrow--gold">Membership Duration</p>
+      <p class="duration__validfor">Valid for</p>
+      <p class="duration__one">One</p>
+      <p class="duration__year">Year</p>
+
+      <div class="goldbar goldbar--center">
+        <span class="goldbar__line goldbar__line--l"></span>
+        <img class="goldbar__diamond" src="assets/diamond-icon.svg" alt="" />
+        <span class="goldbar__line goldbar__line--r"></span>
+      </div>
+
+      <div class="validity">
+        <h3 class="validity__title">Membership Validity</h3>
+        <p class="validity__text">Your OPAL VIP Membership is valid for one year from the date of activation. To ensure
+          uninterrupted access to your privileges, please keep your card active and present it during your visits</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ THANK YOU ============================ -->
+  <section class="thanks" id="thanks">
+    <span class="corner corner--tl"></span>
+    <span class="corner corner--tr"></span>
+    <span class="corner corner--bl"></span>
+    <span class="corner corner--br"></span>
+
+    <div class="thanks__grid">
+      <div class="thanks__cards">
+        <img class="thanks__card" src="assets/vip-card-front.png" alt="OPAL VIP Card — front" />
+        <img class="thanks__card" src="assets/vip-card-back.png" alt="OPAL VIP Card — back" />
+      </div>
+
+      <div class="thanks__content">
+        <p class="thanks__eyebrow">A Note of Gratitude</p>
+        <p class="thanks__from">from all of us at</p>
+        <img class="logo logo--dark thanks__logo" src="assets/opal-logo.png" alt="OPAL" />
+        <p class="thanks__script">Thank You</p>
+
+        <div class="goldbar goldbar--center">
+          <span class="goldbar__line goldbar__line--l"></span>
+          <img class="goldbar__diamond" src="assets/diamond-icon.svg" alt="" />
+          <span class="goldbar__line goldbar__line--r"></span>
+        </div>
+
+        <p class="thanks__text">Thank you for choosing OPAL as your trusted destination for aesthetics, wellness, and
+          beauty. We look forward to continuing your journey with exceptional care, personalized attention, and
+          exclusive VIP experiences</p>
+      </div>
+    </div>
+
+    <div class="thanks__footer">
+      <p class="thanks__values">Beauty • Wellness • Confidence</p>
+      <p class="thanks__member">OPAL VIP Member</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
