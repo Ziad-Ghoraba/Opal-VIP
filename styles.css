@@ -308,7 +308,7 @@ ul { list-style: none; padding: 0; }
   position: relative; overflow: hidden;
   background: linear-gradient(90deg, var(--wine-deep), #3a0710 55%, var(--wine));
   border: 1px solid var(--gold-border);
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem;
+  display: flex; flex-direction: column; align-items: stretch; gap: 1.5rem;
   padding: clamp(1.25rem, 3vw, 2rem);
   color: var(--cream);
 }
@@ -320,23 +320,30 @@ ul { list-style: none; padding: 0; }
   margin-top: 0.6rem; max-width: 640px; color: var(--cream-80);
   font-weight: 300; font-size: clamp(0.85rem, 1.4vw, 1rem); line-height: 1.5;
 }
-.cta-bar__actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
-.chip {
-  padding: 0.45rem 1.1rem; border: 1px solid var(--gold-line);
-  color: var(--gold); border-radius: 2px; font-size: 0.8rem;
-  text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;
-  cursor: pointer; user-select: none;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.15s ease, border-color 0.3s ease;
+.contact-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.75rem; }
+.contact-card {
+  display: flex; flex-direction: column; align-items: center; gap: 0.35rem;
+  padding: 1.1rem 0.75rem; text-align: center; text-decoration: none;
+  color: var(--cream); background: rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--gold-border); border-radius: 4px;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
 }
-.chip:hover { background: var(--gold); color: var(--wine-deep); border-color: var(--gold); }
-.chip:active { transform: translateY(1px); }
-.cta-bar__qr { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
-.cta-bar__qr img {
-  width: 132px; height: 132px; background: #fff; padding: 8px; border-radius: 4px;
+.contact-card:hover { background: rgba(201, 168, 76, 0.08); border-color: var(--gold); transform: translateY(-2px); }
+.contact-card:active { transform: translateY(0); }
+.contact-card:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.contact-card__icon {
+  width: 44px; height: 44px; margin-bottom: 0.25rem; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 1px solid var(--gold-line); color: var(--gold);
+  transition: background 0.3s ease, color 0.3s ease;
 }
-.cta-bar__scan {
-  font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cream-53);
+.contact-card__icon svg { width: 20px; height: 20px; fill: currentColor; }
+.contact-card:hover .contact-card__icon { background: var(--gold); color: var(--wine-deep); }
+.contact-card__label {
+  color: var(--gold); font-size: 0.8rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em;
 }
+.contact-card__sub { color: var(--cream-80); font-size: 0.75rem; font-weight: 300; }
 
 /* ============================================================
    BEFORE & AFTER
@@ -753,6 +760,7 @@ ul { list-style: none; padding: 0; }
 
 @media (max-width: 1024px) {
   .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: repeat(3, 1fr); }
   .laser__photo { opacity: 0.35; width: 100%; }
   .laser__gradient { background: linear-gradient(180deg, rgba(5,3,3,0.6), rgba(46,9,16,0.85)); }
 }
@@ -787,20 +795,14 @@ ul { list-style: none; padding: 0; }
   }
   .svc-card--filler { display: none; }
 
-  /* CTA: centered and structured, with a real button grid (2 + 1). */
+  /* CTA: centered, contact cards in a 2-column grid. */
   .cta-bar {
-    flex-direction: column; align-items: stretch; text-align: center;
+    text-align: center;
     gap: 1.4rem; border-radius: 14px; padding: 1.75rem 1.25rem;
   }
   .cta-bar__desc { margin-inline: auto; }
-  .cta-bar__actions {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem;
-    margin-top: 1.25rem;
-  }
-  .chip { padding: 0.75rem 1rem; text-align: center; border-radius: 6px; font-size: 0.82rem; }
-  .chip:nth-child(3) { grid-column: 1 / -1; }
-  .cta-bar__qr { align-self: center; }
-  .cta-bar__qr img { width: 150px; height: 150px; }
+  .contact-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+  .contact-card { border-radius: 10px; padding: 1rem 0.5rem; }
   /* Let the track use the full width; float the arrows over it so the card
      no longer gets squeezed/cropped between two flex-item buttons. */
   .ba__carousel { padding: 0; gap: 0; }
